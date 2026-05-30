@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shivam - Skills</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Geist & Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        /* Custom styles to handle specific glows and specific token requirements that might be tricky with standard tailwind utilities inline */
+        .card-hover-effect:hover {
+            box-shadow: 0 0 20px rgba(173, 198, 255, 0.15); /* primary color glow */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#2f2ebe",
+                        "on-secondary": "#263143",
+                        "surface-tint": "#adc6ff",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-primary": "#002e6a",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "secondary-fixed": "#d8e3fb",
+                        "on-error": "#690005",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-container-high": "#222a3d",
+                        "surface-container": "#171f33",
+                        "outline-variant": "#424754",
+                        "surface-container-highest": "#2d3449",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed-dim": "#adc6ff",
+                        "primary": "#adc6ff",
+                        "tertiary-fixed": "#e1e0ff",
+                        "surface-variant": "#2d3449",
+                        "on-tertiary-container": "#0d0096",
+                        "inverse-on-surface": "#283044",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#1000a9",
+                        "on-secondary-container": "#aeb9d0",
+                        "tertiary": "#c0c1ff",
+                        "on-tertiary-fixed": "#07006c",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary-fixed-dim": "#c0c1ff",
+                        "inverse-primary": "#005ac2",
+                        "secondary": "#bcc7de",
+                        "inverse-surface": "#dae2fd",
+                        "on-primary-container": "#00285d",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#8083ff",
+                        "surface-dim": "#0b1326",
+                        "secondary-container": "#3e495d",
+                        "surface-container-lowest": "#060e20",
+                        "outline": "#8c909f",
+                        "surface": "#0b1326",
+                        "on-primary-fixed": "#001a42",
+                        "on-primary-fixed-variant": "#004395",
+                        "primary-container": "#4d8eff",
+                        "surface-bright": "#31394d",
+                        "on-surface": "#dae2fd",
+                        "background": "#0b1326",
+                        "on-secondary-fixed": "#111c2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "margin": "32px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Geist", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Geist", "sans-serif"],
+                        "display-lg-mobile": ["Geist", "sans-serif"],
+                        "label-sm": ["JetBrains Mono", "monospace"],
+                        "headline-lg": ["Geist", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30 z-50">
+<div class="flex justify-between items-center w-full px-margin h-20 max-w-container-max mx-auto transition-all ease-in-out duration-300">
+<!-- Brand -->
+<div class="font-headline-md text-headline-md font-bold text-on-surface">
+                Shivam
+            </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200" href="#">Projects</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:scale-105 duration-200" href="#">Skills</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200" href="#">Education</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-105 duration-200" href="#">Contact</a>
+</div>
+<!-- Trailing Action -->
+<button class="hidden md:block bg-transparent border border-outline-variant text-on-surface px-6 py-2 rounded-lg font-body-md hover:bg-surface-variant hover:border-primary transition-all duration-300">
+                Resume
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin py-section-gap flex flex-col gap-12">
+<!-- Header Section -->
+<header class="flex flex-col gap-4 text-center md:text-left">
+<h1 class="font-display-lg text-display-lg text-on-surface">Technical Arsenal</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A quantitative breakdown of my technical proficiencies, engineered across architectural layers. From multi-agent AI orchestration to high-performance database tuning.
+            </p>
+</header>
+<!-- Bento Grid for Skills -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1: AI / LLM -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6 flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary card-hover-effect">
+<div class="flex items-center gap-3">
+<div class="bg-surface-variant p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">AI / LLM</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>RAG Systems</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[95%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>LangChain / LangGraph</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[90%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Multi-agent Orchestration</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Tool Calling</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[90%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Backend -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6 flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary card-hover-effect">
+<div class="flex items-center gap-3">
+<div class="bg-surface-variant p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dns</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Backend</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Node.js / Express</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[95%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>NestJS</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>BullMQ</span><span>80%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[80%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>REST / OpenAPI</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[95%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Card 3: Databases -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6 flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary card-hover-effect">
+<div class="flex items-center gap-3">
+<div class="bg-surface-variant p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">database</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Databases</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Qdrant (Vector)</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>PostgreSQL</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[90%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>MongoDB</span><span>88%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[88%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Redis</span><span>80%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[80%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Card 4: Auth & DevOps -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6 flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary card-hover-effect">
+<div class="flex items-center gap-3">
+<div class="bg-surface-variant p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Auth &amp; DevOps</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Docker</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>GitHub Actions (CI/CD)</span><span>80%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[80%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>JWT / OAuth</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[90%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Jest / Playwright</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Card 5: Frontend -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6 flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary card-hover-effect">
+<div class="flex items-center gap-3">
+<div class="bg-surface-variant p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Frontend</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>React / Next.js</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[95%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>TanStack Query</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[90%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Redux</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Tailwind CSS</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[95%]"></div></div>
+</div>
+</div>
+</div>
+<!-- Card 6: Languages -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-6 flex flex-col gap-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary card-hover-effect">
+<div class="flex items-center gap-3">
+<div class="bg-surface-variant p-2 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Languages</h2>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>TypeScript</span><span>95%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[95%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>JavaScript</span><span>98%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[98%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Python</span><span>85%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[85%]"></div></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>SQL</span><span>90%</span></div>
+<div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full w-[90%]"></div></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center py-section-gap px-margin max-w-container-max mx-auto gap-unit transition-all duration-200">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 Shivam Kumar Saraffa. All rights reserved.
+            </p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Github</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
