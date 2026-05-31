@@ -3,28 +3,42 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import Project1 from '../assets/project1.png';
+import AiAgents from '../assets/ai_agents.png'
+import LabReport from '../assets/lab_report.png'
+import Digidukaan from '../assets/digidukaan.png'
+import SarkariPrivateJob from '../assets/sarkariprivatejob.png'
 import Project2 from '../assets/project2.png';
 import Project3 from '../assets/project3.png';
 
 const projects = [
   {
-    title: 'AI Engineering - Autonomous Agents & RAG',
-    description:
-      'Built autonomous LLM agents for recruitment, travel, sales, finance, and e-commerce using a master orchestrator plus sub-agent pattern with parallel tool calls. Includes multi-turn RAG with hybrid retrieval, reranking, and citation-grounded answers.',
-    technologies: ['Python', 'Claude', 'OpenRouter', 'Haystack v2', 'Qdrant', 'FastAPI'],
-    github: '#',
-    live: '#',
-    image: Project1,
-  },
-  {
     title: 'LabReport Pro',
     description:
-      'Multi-tenant pathology-lab SaaS replacing manual Word workflows with test catalogs, report templates, health checkups, PDF rendering, JWT refresh, and a patient self-service portal deployed on GCP Cloud Run.',
+    'Multi-tenant pathology-lab SaaS replacing manual Word workflows with test catalogs, report templates, health checkups, PDF rendering, JWT refresh, and a patient self-service portal deployed on GCP Cloud Run.',
     technologies: ['Django 5', 'DRF', 'React 18', 'TypeScript', 'PostgreSQL', 'GCP Cloud Run'],
-    github: '#',
-    live: '#',
-    image: Project2,
+    github: 'https://github.com/saraffa13/lab-report',
+    live: 'https://lab-report-swart.vercel.app/login',
+    image: LabReport,
     prod: true,
+  },
+  {
+    title: 'DigiDukan — QR-Based Digital Storefront SaaS',
+    description:
+    'Multi-tenant SaaS letting small Indian businesses spin up a branded digital catalog in under 5 minutes via a printable QR code. Features a cart-to-WhatsApp checkout flow, 3-layer plan enforcement, soft-delete integrity, a super-admin panel with impersonation and audit logs, a 7-step onboarding wizard, and per-shop branding across three distinct surfaces — public storefront, owner dashboard, and admin panel.',
+    technologies: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Auth.js v5', 'Tailwind v4', 'Cloudinary', 'Vercel', 'Neon'],
+    github: 'https://github.com/saraffa13/shop',
+    live: 'https://digidukaan.innovgeist.com/',
+    image: Digidukaan,
+    prod: true,
+  },
+  {
+    title: 'AI Engineering - Autonomous Agents & RAG',
+    description:
+    'Built autonomous LLM agents for recruitment, travel, sales, finance, and e-commerce using a master orchestrator plus sub-agent pattern with parallel tool calls. Includes multi-turn RAG with hybrid retrieval, reranking, and citation-grounded answers.',
+    technologies: ['Python', 'Claude', 'OpenRouter', 'Haystack v2', 'Qdrant', 'FastAPI'],
+    github: '#',
+    live: 'https://www.zynd.ai/registry?q=in',
+    image: AiAgents,
   },
   {
     title: 'Sarkari Naukri',
@@ -32,13 +46,10 @@ const projects = [
       'Bilingual government job aggregation portal on Next.js App Router serving listings across categories. Cheerio-based crawlers normalize external HTML into structured JSON with automated ingestion and SEO-first pages.',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind', 'Cheerio'],
     github: '#',
-    live: '#',
-    image: Project3,
+    live: 'https://sarkariprivatejob.com',
+    image: SarkariPrivateJob,
     prod: true,
   },
-];
-
-const moreProjects = [
   {
     title: 'Medicart',
     description:
@@ -57,14 +68,9 @@ const moreProjects = [
     live: 'https://placement2023-f08ce.web.app/home',
     image: Project2,
   },
-  {
-    title: 'Duke',
-    description: 'B2B manufacturing website with customizable product displays and secure authentication features.',
-    technologies: ['React', 'Redux', 'TypeScript', 'Magento'],
-    github: '#',
-    live: '#',
-    image: Project3,
-  },
+];
+
+const moreProjects = [
 ];
 
 const face = {
@@ -87,8 +93,8 @@ function ProjectCard({ project, index }) {
       viewport={{ once: true }}
       className="relative h-[400px] cursor-pointer"
       style={{ perspective: '1200px' }}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
+      onPointerEnter={() => setFlipped(true)}
+      onPointerLeave={() => setFlipped(false)}
       onFocus={() => setFlipped(true)}
       onBlur={() => setFlipped(false)}
       tabIndex={0}
@@ -98,6 +104,7 @@ function ProjectCard({ project, index }) {
         transition={{ type: 'spring', stiffness: 120, damping: 18, mass: 0.6 }}
         style={{ width: '100%', height: '100%', position: 'relative', transformStyle: 'preserve-3d' }}
       >
+        {/* ── FRONT ── */}
         <div style={face} className="flex flex-col border border-outline-variant bg-surface-container">
           <div className="relative h-[55%] shrink-0 overflow-hidden bg-surface-high">
             <img src={project.image} alt="" className="h-full w-full object-cover" />
@@ -106,21 +113,29 @@ function ProjectCard({ project, index }) {
               style={{ background: 'linear-gradient(to top, #171f33, transparent)' }}
             />
             {project.prod && (
-              <div className="absolute left-3 top-3 flex items-center gap-1.5 rounded-md border border-red-500/40 bg-surface/80 px-2 py-1 backdrop-blur-sm">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-75" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-400" />
+              <div
+                className="absolute left-3 top-3 flex items-center gap-2 rounded-md border border-red-500/60 bg-red-950/80 px-2.5 py-1.5 backdrop-blur-sm"
+                style={{ boxShadow: '0 0 12px rgba(239,68,68,0.35)' }}
+              >
+                <span className="relative flex h-2 w-2 shrink-0">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-80" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-red-400" />
                 </span>
-                <span className="font-mono text-[10px] tracking-wider text-red-400">Live in prod</span>
+                <span className="font-mono text-[11px] font-semibold tracking-wider text-red-300">Live in prod</span>
               </div>
             )}
-            <div className="absolute right-3 top-3 flex gap-2">
-              <ProjectLink href={project.github} label="View source">
+            {/* Link buttons — stop pointer propagation so hovering them doesn't flip the card */}
+            <div
+              className="absolute right-3 top-3 flex gap-2"
+              onPointerEnter={(e) => e.stopPropagation()}
+              onPointerLeave={(e) => e.stopPropagation()}
+            >
+              <FrontLink href={project.github} label="GitHub">
                 <FaGithub size={13} />
-              </ProjectLink>
-              <ProjectLink href={project.live} label="Open live project">
+              </FrontLink>
+              <FrontLink href={project.live} label="Live Demo">
                 <ExternalLink size={13} />
-              </ProjectLink>
+              </FrontLink>
             </div>
           </div>
 
@@ -129,17 +144,38 @@ function ProjectCard({ project, index }) {
               {project.title}
             </h3>
             <TechList items={project.technologies} />
-            <p className="mt-3 font-mono text-[10px] uppercase tracking-widest text-outline">Hover to see details</p>
+            <p className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-md border border-primary/30 bg-primary/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-primary">
+              Hover to see details →
+            </p>
           </div>
         </div>
 
+        {/* ── BACK ── */}
         <div style={{ ...face, transform: 'rotateY(180deg)' }} className="flex flex-col border border-primary-bright/40 bg-surface-high p-5">
-          <h3 className="mb-3 font-display text-base font-semibold leading-snug text-on-surface">{project.title}</h3>
+          <div className="mb-3 flex items-start justify-between gap-2">
+            <h3 className="font-display text-base font-semibold leading-snug text-on-surface">{project.title}</h3>
+            {project.prod && (
+              <div
+                className="flex shrink-0 items-center gap-1.5 rounded-md border border-red-500/60 bg-red-950/80 px-2 py-1"
+                style={{ boxShadow: '0 0 10px rgba(239,68,68,0.3)' }}
+              >
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-400 opacity-80" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-red-400" />
+                </span>
+                <span className="font-mono text-[10px] font-semibold text-red-300">Live</span>
+              </div>
+            )}
+          </div>
           <p className="flex-1 overflow-y-auto text-sm leading-relaxed text-on-surface-variant">{project.description}</p>
           <TechList items={project.technologies} compact />
-          <div className="mt-4 flex gap-4 border-t border-outline-variant pt-4">
-            <TextLink href={project.github} icon={<FaGithub size={13} />}>Code</TextLink>
-            <TextLink href={project.live} icon={<ExternalLink size={13} />}>Live Demo</TextLink>
+          <div className="mt-4 flex gap-3 border-t border-outline-variant pt-4">
+            <BackLink href={project.github} onClick={(e) => e.stopPropagation()}>
+              <FaGithub size={13} /> GitHub
+            </BackLink>
+            <BackLink href={project.live} onClick={(e) => e.stopPropagation()}>
+              <ExternalLink size={13} /> Live Demo
+            </BackLink>
           </div>
         </div>
       </motion.div>
@@ -147,14 +183,15 @@ function ProjectCard({ project, index }) {
   );
 }
 
-function ProjectLink({ href, label, children }) {
+function FrontLink({ href, label, children }) {
+  if (!href || href === '#') return null;
   return (
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
-      onClick={(event) => event.stopPropagation()}
       aria-label={label}
+      onClick={(e) => e.stopPropagation()}
       className="flex h-8 w-8 items-center justify-center rounded-md border border-outline-variant bg-surface/80 text-on-surface-variant backdrop-blur-sm transition-all duration-200 hover:border-primary hover:text-primary"
     >
       {children}
@@ -162,15 +199,16 @@ function ProjectLink({ href, label, children }) {
   );
 }
 
-function TextLink({ href, icon, children }) {
+function BackLink({ href, onClick, children }) {
+  if (!href || href === '#') return null;
   return (
     <a
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="flex items-center gap-1.5 font-mono text-xs text-on-surface-variant transition-colors duration-200 hover:text-primary"
+      onClick={onClick}
+      className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-outline-variant bg-surface-container py-2 font-mono text-xs text-on-surface-variant transition-all duration-200 hover:border-primary hover:text-primary"
     >
-      {icon}
       {children}
     </a>
   );
@@ -232,7 +270,7 @@ export default function Projects() {
           )}
         </AnimatePresence>
 
-        <div className="mt-10 flex justify-center">
+        {/* <div className="mt-10 flex justify-center">
           <button
             type="button"
             onClick={() => setShowMore((current) => !current)}
@@ -240,7 +278,7 @@ export default function Projects() {
           >
             {showMore ? 'Show Less' : 'View More'}
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
