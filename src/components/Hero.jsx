@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaDownload, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { SiCodeforces, SiLeetcode } from 'react-icons/si';
 
 const chips = [
@@ -117,6 +117,13 @@ export default function Hero() {
               className="rounded-lg border border-outline-variant bg-transparent px-6 py-3 text-sm font-semibold text-on-surface transition-all duration-200 hover:border-primary hover:bg-surface-high"
             >
               Contact Me
+            </a>
+            <a
+              href="/resume.pdf"
+              download="Shivam_Kumar_Saraffa_Resume.pdf"
+              className="flex items-center gap-2 rounded-lg border border-outline-variant bg-transparent px-6 py-3 text-sm font-semibold text-on-surface-variant transition-all duration-200 hover:border-primary hover:text-primary"
+            >
+              <FaDownload size={13} /> Resume
             </a>
           </motion.div>
 
